@@ -32,3 +32,250 @@ html,body{background:#000}
 
 /* v13: quiet header and editorial display-serif era pills */
 .site-header{grid-template-columns:auto 1fr;gap:1rem}.site-header .site-controls{grid-column:2;justify-self:end;border-top:0;padding-top:0}.era-pill{font-family:"Cormorant Garamond","Libre Caslon Display",Georgia,serif;font-weight:600;font-size:clamp(1.45rem,2.2vw,1.8rem);line-height:1.1;letter-spacing:.01em;min-height:58px;padding:.8rem 2rem}@media(max-width:640px){.site-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}.site-header .site-controls{grid-column:auto;margin-top:0;padding-top:0;justify-content:flex-end}}
+
+
+
+
+
+/* v14: consistent editorial typography and a restrained walk into each era. */
+:root {
+  --display: "Cormorant Garamond", Georgia, serif;
+  --body: "Source Serif 4", Georgia, serif;
+  --serif: var(--display);
+  --sans: var(--body);
+}
+body, button, .cta, .email, .object-label, .chapter-marker,
+.artifact figcaption, .opening-line, .hero-line {
+  font-family: var(--body);
+}
+.home-hero h1, .era-hero h1, .section-inner h2, .timeline-entry h3,
+.era-pill, .chapter-link strong {
+  font-family: var(--display);
+}
+.prose p, .libel-copy p, .timeline-entry p, .section-lead,
+.genealogy-intro p, .stream-grid p {
+  font-family: var(--body);
+  opacity: 1;
+  transform: none;
+}
+.brand img { filter: grayscale(1) brightness(1.85); }
+.site-header {
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  min-height: 72px;
+  background: rgba(0,0,0,.94);
+}
+.site-header .site-controls {
+  grid-column: 2;
+  justify-self: end;
+  border: 0;
+  padding: 0;
+}
+.audio-toggle, .lang-controls button {
+  font-family: var(--body);
+  font-size: .74rem;
+  letter-spacing: .04em;
+}
+.home-hero {
+  min-height: 67svh;
+  align-items: center;
+  padding: clamp(5rem,9vw,8rem) clamp(1.2rem,6vw,7rem);
+  background: radial-gradient(ellipse at 74% 48%,rgba(110,86,58,.09),transparent 47%), #000;
+}
+.home-hero-copy { width: min(100%,1120px); margin-inline: auto; }
+.opening-line {
+  max-width: 56ch;
+  margin: 0 0 clamp(2rem,4vw,4rem);
+  font-size: clamp(1.25rem,1.7vw,1.65rem);
+  line-height: 1.62;
+  color: #ded7cf;
+}
+.home-hero h1 {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(4.8rem,10vw,9.8rem);
+  line-height: .9;
+  letter-spacing: -.035em;
+  font-weight: 400;
+}
+.hero-line {
+  max-width: 44ch;
+  margin: clamp(1.5rem,3vw,2.5rem) 0 0;
+  font-size: clamp(1.45rem,2.2vw,2.1rem);
+  line-height: 1.42;
+  color: #eee7dc;
+}
+.home-body { background:#050505; }
+.home-body .prose { max-width: 890px; }
+.home-body .prose p { opacity:1; transform:none; }
+.era-selection {
+  padding: clamp(3.5rem,6vw,6rem) 1rem;
+  border-top: 1px solid var(--line);
+}
+.era-pills { gap: clamp(.7rem,1.5vw,1.4rem); }
+.era-pill {
+  min-width: clamp(190px,19vw,250px);
+  min-height: 64px;
+  padding: .9rem 1.7rem;
+  border-color: #6a6258;
+  font-size: clamp(1.65rem,2.25vw,2rem);
+  font-weight: 500;
+  background: #090807;
+  transition: background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.era-pill:hover { background:#211c18; border-color:#d6c5ab; transform:translateY(-2px); }
+.era-hero {
+  display: grid;
+  grid-template-columns: minmax(0,.78fr) minmax(0,1.22fr);
+  align-items: center;
+  gap: clamp(2.5rem,6vw,7rem);
+  min-height: 0;
+  padding: clamp(3.5rem,7vw,7rem) clamp(1.2rem,6vw,7rem);
+  background: radial-gradient(ellipse at 75% 39%,rgba(151,124,85,.11),transparent 38%),#000;
+  overflow: visible;
+}
+.era-hero-title { position:static; width:auto; padding:0; }
+.chapter-marker {
+  margin:0 0 1.5rem;
+  color:#c7b69c;
+  font-size:.76rem;
+  line-height:1.4;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.era-hero h1 {
+  margin:0;
+  font-size:clamp(4.2rem,7vw,8rem);
+  line-height:.92;
+  overflow-wrap:normal;
+}
+.era-art { width:100%; margin:0; padding:0; border:0; background:none; box-shadow:none; }
+.era-art-frame {
+  position:relative;
+  padding:clamp(.6rem,1.2vw,1.2rem);
+  border:1px solid #51493d;
+  background:#090807;
+  box-shadow:0 26px 70px #000,0 -20px 60px rgba(232,207,156,.06);
+}
+.era-art-frame::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-top:1px solid rgba(255,238,200,.18);
+  pointer-events:none;
+}
+.era-art-frame img {
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:70vh;
+  object-fit:contain;
+  background:#000;
+}
+.object-label {
+  max-width:68ch;
+  margin:1.3rem 0 0;
+  color:#cfc7bb;
+  font-size:clamp(.96rem,1.1vw,1.08rem);
+  line-height:1.6;
+}
+.object-label-kicker {
+  display:block;
+  margin:0 0 .5rem;
+  color:#bba789;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.16em;
+}
+.object-label strong { display:block; color:#f2ece3; font-weight:500; }
+.object-provenance { display:block; margin-top:.35rem; color:#9f978d; font-size:.9em; }
+.object-label p { margin:.6rem 0 0; }
+.chapter-nav {
+  padding:clamp(3rem,5vw,5rem) clamp(1.2rem,6vw,7rem);
+  border-top:1px solid #26221d;
+  background:#070605;
+}
+.chapter-nav-inner {
+  width:min(100%,1160px);
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:2rem;
+}
+.chapter-link { display:flex; flex-direction:column; gap:.35rem; text-decoration:none; }
+.chapter-link span {
+  color:#bba789;
+  font-size:.74rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.chapter-link strong {
+  color:#f2eee7;
+  font-size:clamp(1.8rem,3vw,3.1rem);
+  font-weight:500;
+  line-height:1;
+}
+.chapter-link:hover strong,.chapter-link:focus-visible strong { color:#dcc9aa; }
+.chapter-link:focus-visible { outline:2px solid #f2eee7; outline-offset:8px; }
+.chapter-forward { text-align:right; }
+.walk-transition {
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:grid;
+  place-items:center;
+  background:rgba(0,0,0,.96);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .48s ease;
+}
+.walk-transition.is-visible { opacity:1; }
+.walk-threshold {
+  display:block;
+  width:min(50vw,430px);
+  height:min(70vh,620px);
+  border:1px solid rgba(237,217,176,.25);
+  box-shadow:0 0 70px rgba(229,203,148,.09),inset 0 0 65px rgba(229,203,148,.04);
+  transform:scale(.93);
+  transition:transform .48s ease;
+}
+.walk-transition.is-visible .walk-threshold { transform:scale(1.06); }
+.is-departing main { transition:opacity .48s ease,transform .48s ease; opacity:.25; transform:scale(1.015); }
+.is-arriving .era-hero-title,.is-arriving .era-art {
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+.is-arriving.has-arrived .era-hero-title,.is-arriving.has-arrived .era-art { opacity:1; transform:none; }
+[dir=rtl] .chapter-forward { text-align:left; }
+@media(max-width:800px) {
+  .era-hero { grid-template-columns:1fr; gap:2.5rem; }
+  .era-hero h1 { font-size:clamp(4.4rem,12vw,7rem); }
+  .era-art-frame img { max-height:64vh; }
+  .home-hero { min-height:62svh; }
+  .home-hero h1 { font-size:clamp(4.5rem,11vw,7rem); }
+}
+@media(max-width:640px) {
+  .site-header { display:grid; grid-template-columns:1fr; min-height:0; gap:.2rem; padding:.5rem 1rem; }
+  .brand { width:150px; }
+  .brand img { height:44px; }
+  .site-header .site-controls { grid-column:1; justify-self:stretch; display:flex; gap:.6rem; margin:0; padding:.4rem 0 0; border-top:1px solid var(--line2); justify-content:space-between; }
+  .lang-controls { gap:.2rem; }
+  .audio-toggle,.lang-controls button { font-size:.75rem; min-height:31px; padding:.3rem .2rem; }
+  .home-hero { padding:4rem 1.2rem 4.7rem; }
+  .home-hero h1 { font-size:clamp(4.3rem,13vw,6rem); }
+  .opening-line { font-size:1.25rem; margin-bottom:2.2rem; }
+  .hero-line { font-size:1.55rem; }
+  .era-hero { padding:3.3rem 1.2rem 4.5rem; }
+  .era-hero h1 { font-size:clamp(4rem,13vw,5.8rem); }
+  .chapter-nav { padding:3rem 1.2rem; }
+  .chapter-nav-inner { grid-template-columns:1fr; gap:2rem; }
+  .chapter-forward { text-align:left; }
+  .era-pill { min-width:min(100%,320px); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .era-pill,.walk-transition,.walk-threshold,.is-departing main,
+  .is-arriving .era-hero-title,.is-arriving .era-art { transition:none!important; transform:none!important; }
+  .walk-transition { display:none; }
+}
