@@ -110,7 +110,7 @@ function home() {
       <video poster="home-film-poster.jpg" preload="metadata" autoplay muted loop playsinline aria-label="Atmospheric footage of barbed wire">
         <source src="home-film.mp4" type="video/mp4">
       </video>
-      <button class="film-toggle" type="button">${text('Play film')}</button>
+      <button class="film-toggle" type="button" aria-label="${text('Play film')}" title="${text('Play film')}" data-state="paused"><span class="film-icon" aria-hidden="true"></span></button>
     </section>
     <section class="home-hero">
       <div class="home-hero-copy">
@@ -184,7 +184,7 @@ function antizionism() {
       <video poster="antizionism-film-poster.jpg" preload="metadata" autoplay muted loop playsinline aria-label="Film of a stone statue beneath the sky">
         <source src="antizionism-film.mp4" type="video/mp4">
       </video>
-      <button class="film-toggle" type="button">${text('Play film')}</button>
+      <button class="film-toggle" type="button" aria-label="${text('Play film')}" title="${text('Play film')}" data-state="paused"><span class="film-icon" aria-hidden="true"></span></button>
     </section>
     ${hero(data,'antizionism')}
     <section class="era-intro"><div class="prose">${p(data.paragraphs[0])}${groupedParagraph(data.paragraphs.slice(1))}</div>${gallery(COPY.placements.intro)}</section>
@@ -242,8 +242,9 @@ function installFilms() {
   if (!film || !toggle) return;
   const sync = () => {
     const label = film.paused ? 'Play film' : 'Pause film';
-    toggle.textContent = tx(label);
     toggle.setAttribute('aria-label', tx(label));
+    toggle.setAttribute('title', tx(label));
+    toggle.dataset.state = film.paused ? 'paused' : 'playing';
   };
   film.addEventListener('play', sync);
   film.addEventListener('pause', sync);

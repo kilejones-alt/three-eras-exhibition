@@ -17,3 +17,5 @@ The gallery uses a single black background. Page links use a soft dark transitio
 The site is static HTML, CSS, JavaScript, and media files. No build step is required.
 
 The header uses a compact four-bar sound symbol, followed by English, Hebrew, and Russian controls in one row. The sound symbol has a spoken label and pressed state for assistive technology.
+
+Film controls use a compact grayscale play/pause symbol just beneath the film at its right edge. The grayscale logo moves diagonally and gains a subtle glow on hover. No new site color is applied.
