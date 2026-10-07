@@ -6,10 +6,12 @@ Open `index.html` for the homepage. Its three text-only pills lead to `antijudai
 
 Artwork sits in separate lit frames, with a compact expandable object label beneath every image. Hovering lifts a frame and slowly enlarges the image over 5.4 seconds. Transitions and hover motion respect reduced-motion settings.
 
-The homepage starts with an empty projection frame reserved for the forthcoming exhibition video. The Antizionism timeline shows original archival images above the moments they illustrate, including the 1941 meeting, Soviet campaign, and Fayez Sayegh. The images are copied unchanged from the earlier exhibition bundle. The timeline uses quiet dividers without a colored vertical rail.
+The homepage has a hidden video mount immediately below the header for the forthcoming exhibition video; it displays no empty placeholder. The Antizionism timeline shows original archival images above the moments they illustrate, including the 1941 meeting, Soviet campaign, and Fayez Sayegh. The images are copied unchanged from the earlier exhibition bundle. The timeline uses spacing without a colored rail or section dividers.
 
 Homepage body wording follows the [Exhibition Home Page wording](https://docs.google.com/document/d/1YOFaamw5o2xQMaJ7MElMXHnTY1889-4bBPNnE30OEHY/edit) document. The opening statement follows the later approved copy. Original artwork files remain in the repository. `door-antizionism-naya-clean.jpg` is a manually cleaned copy that removes a camera icon from the original file without AI image generation or editing.
 
 Typography uses Cormorant Garamond for display titles and Source Serif 4 for reading text.
+
+The gallery uses a single black background. Page links use a short fade without a decorative transition box. Each timeline moment's prose reads as one paragraph, and all object-detail controls use a compact size.
 
 The site is static HTML, CSS, JavaScript, and media files. No build step is required.

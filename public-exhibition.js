@@ -106,7 +106,7 @@ function eraPills() {
 function home() {
   const h = COPY.home;
   return `${nav()}<main class="home-main">
-    <section class="home-video-reserve" aria-label="Space reserved for the exhibition video"><div class="video-recess" aria-hidden="true"></div></section>
+    <div id="home-video-mount" hidden></div>
     <section class="home-hero">
       <div class="home-hero-copy">
         <p class="opening-line">${text(h.before)}</p>
@@ -176,7 +176,7 @@ function antizionism() {
     ${hero(data,'antizionism')}
     <section class="era-intro"><div class="prose">${data.paragraphs.map(p).join('')}</div>${gallery(COPY.placements.intro)}</section>
     <section class="streams"><div class="section-inner"><h2>${text(COPY.streams.title)}</h2><p class="section-lead">${text(COPY.streams.lead)}</p><div class="stream-grid">${COPY.streams.items.map(x => `<p>${text(x)}</p>`).join('')}</div></div></section>
-    <section class="genealogy"><div class="section-inner"><h2>${text(COPY.genealogy.title)}</h2><div class="genealogy-intro">${COPY.genealogy.intro.map(p).join('')}</div><details class="timeline-disclosure"><summary>${text('Explore the historical timeline')} <span aria-hidden="true">+</span></summary><div class="timeline">${COPY.genealogy.events.map(e => `<article class="timeline-entry">${e.images?.length ? `<div class="timeline-art-grid">${e.images.map(img => `<figure class="timeline-art"><div class="timeline-art-frame"><img src="${esc(img)}" alt="${esc(objectDetails[img]?.[0] || 'Historical object')}" loading="lazy" decoding="async"></div><figcaption>${objectInfo(img)}</figcaption></figure>`).join('')}</div>` : ''}<h3>${text(e.title)}</h3>${e.paragraphs.map(p).join('')}</article>`).join('')}</div></details></div></section>
+    <section class="genealogy"><div class="section-inner"><h2>${text(COPY.genealogy.title)}</h2><div class="genealogy-intro"><p>${COPY.genealogy.intro.map(text).join(' ')}</p></div><details class="timeline-disclosure"><summary>${text('Explore the historical timeline')} <span aria-hidden="true">+</span></summary><div class="timeline">${COPY.genealogy.events.map(e => `<article class="timeline-entry">${e.images?.length ? `<div class="timeline-art-grid">${e.images.map(img => `<figure class="timeline-art"><div class="timeline-art-frame"><img src="${esc(img)}" alt="${esc(objectDetails[img]?.[0] || 'Historical object')}" loading="lazy" decoding="async"></div><figcaption>${objectInfo(img)}</figcaption></figure>`).join('')}</div>` : ''}<h3>${text(e.title)}</h3><p>${e.paragraphs.map(text).join(' ')}</p></article>`).join('')}</div></details></div></section>
     <section class="libel-intro"><div class="section-inner"><p class="section-lead">${text(COPY.libels.intro)}</p></div></section>
     ${libelPills()}
   </main>`;
@@ -206,24 +206,16 @@ function installWalkTransition() {
       event.preventDefault();
       const destination = link.href;
       document.body.classList.add('is-departing');
-      const veil = document.createElement('div');
-      veil.className = 'walk-transition';
-      veil.setAttribute('aria-hidden', 'true');
-      veil.innerHTML = '<span class="walk-threshold"></span>';
-      document.body.append(veil);
-      requestAnimationFrame(() => veil.classList.add('is-visible'));
       try { sessionStorage.setItem('era-arrival', '1'); } catch (_) {}
-      setTimeout(() => { window.location.href = destination; }, 480);
+      setTimeout(() => { window.location.href = destination; }, 300);
     });
   });
-  if (page !== 'home') {
-    let arriving = false;
-    try { arriving = sessionStorage.getItem('era-arrival') === '1'; sessionStorage.removeItem('era-arrival'); } catch (_) {}
-    if (arriving && !reduceMotion.matches) {
-      document.body.classList.add('is-arriving');
-      requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('has-arrived')));
-      setTimeout(() => document.body.classList.remove('is-arriving','has-arrived'), 1000);
-    }
+  let arriving = false;
+  try { arriving = sessionStorage.getItem('era-arrival') === '1'; sessionStorage.removeItem('era-arrival'); } catch (_) {}
+  if (arriving && !reduceMotion.matches) {
+    document.body.classList.add('is-arriving');
+    requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('has-arrived')));
+    setTimeout(() => document.body.classList.remove('is-arriving','has-arrived'), 700);
   }
 }
 
@@ -250,5 +242,6 @@ function render() {
 }
 
 render();
+window.addEventListener('pageshow', () => document.body.classList.remove('is-departing'));
 
 })();
