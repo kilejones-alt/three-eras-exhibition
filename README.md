@@ -2,12 +2,12 @@
 
 The public exhibition site for **The Third Era: Antizionism and the History of Jew-Hatred**.
 
-Open `index.html` for the homepage. Its three text-only pills lead to `antijudaism.html`, `antisemitism.html`, and `exhibition.html`. Clicking a pill starts a brief walk-through transition; each era page then presents its original image in a separate lit frame beside the title. A chapter link continues through the three eras.
+Open `index.html` for the homepage. Its three text-only pills lead to `antijudaism.html`, `antisemitism.html`, and `exhibition.html`. The Antizionism page ends with three text-only pills leading to `colonizer.html`, `apartheid.html`, and `genocide.html`. Each chapter continues forward through the exhibition.
 
-Homepage body wording follows the [Exhibition Home Page wording](https://docs.google.com/document/d/1YOFaamw5o2xQMaJ7MElMXHnTY1889-4bBPNnE30OEHY/edit) document. The opening statement follows the later user-approved copy. Source images are unchanged. Gallery framing and transitions are made with CSS and JavaScript; no AI-generated or AI-edited art is used.
+Artwork sits in separate lit frames, with a compact expandable object label beneath every image. Hovering lifts a frame and slowly enlarges the image over 5.4 seconds. Transitions and hover motion respect reduced-motion settings.
 
-The image notes describe visible content and historical relevance. Exact dates, original publications, holding collections, image permissions, and translated captions require curatorial verification before the final exhibition launch. The source file for the Antizionism header artwork visibly contains a camera/search icon; request a clean original from the image owner rather than editing the source image.
+Homepage body wording follows the [Exhibition Home Page wording](https://docs.google.com/document/d/1YOFaamw5o2xQMaJ7MElMXHnTY1889-4bBPNnE30OEHY/edit) document. The opening statement follows the later approved copy. Original artwork files remain in the repository. `door-antizionism-naya-clean.jpg` is a manually cleaned copy that removes a camera icon from the original file without AI image generation or editing.
 
-Typography uses Cormorant Garamond for display titles and Source Serif 4 for reading text. Movement is disabled when a visitor requests reduced motion.
+Typography uses Cormorant Garamond for display titles and Source Serif 4 for reading text.
 
 The site is static HTML, CSS, JavaScript, and media files. No build step is required.
