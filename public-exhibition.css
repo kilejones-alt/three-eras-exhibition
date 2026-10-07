@@ -493,6 +493,7 @@ body, button, .cta, .email, .object-label, .chapter-marker,
 }
 .timeline-art-frame:hover img { transform:scale(1.07); }
 .timeline-art figcaption { margin-top:.6rem; }
+.timeline-disclosure[open] .object-details:not([open]) summary span { transform:none; }
 @media(max-width:640px) {
   .home-video-reserve { padding:1rem; }
   .video-recess { aspect-ratio:16/9;box-shadow:inset 0 0 0 5px #07090b,inset 0 0 0 6px rgba(190,207,215,.12),0 14px 35px #000; }
