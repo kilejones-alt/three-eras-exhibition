@@ -69,7 +69,7 @@ function nav() {
   return `<header class="site-header">
     <a class="brand" href="index.html" data-era-transition aria-label="Stop Antizionism — exhibition entrance"><img src="stop-antizionism-logo.webp" alt="Stop Antizionism"></a>
     <div class="site-controls">
-      <button class="audio-toggle" type="button">${text('Music')}</button>
+      <button class="audio-toggle" type="button" aria-label="${text('Play music')}" aria-pressed="false" title="${text('Play music')}"><span class="sound-wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
       <div class="lang-controls" role="group" aria-label="${text('Language')}">
         <button type="button" data-lang="en" lang="en">EN</button>
         <button type="button" data-lang="he" lang="he">עברית</button>
@@ -107,7 +107,7 @@ function home() {
   const h = COPY.home;
   return `${nav()}<main class="home-main">
     <section class="home-film" aria-label="Opening film">
-      <video poster="home-film-poster.jpg" preload="none" muted loop playsinline aria-label="Atmospheric footage of barbed wire">
+      <video poster="home-film-poster.jpg" preload="metadata" autoplay muted loop playsinline aria-label="Atmospheric footage of barbed wire">
         <source src="home-film.mp4" type="video/mp4">
       </video>
       <button class="film-toggle" type="button">${text('Play film')}</button>
@@ -180,6 +180,12 @@ function libelPage(key) {
 function antizionism() {
   const data = COPY.era.antizionism;
   return `${nav()}<main>
+    <section class="era-film" aria-label="Opening film">
+      <video poster="antizionism-film-poster.jpg" preload="metadata" autoplay muted loop playsinline aria-label="Film of a stone statue beneath the sky">
+        <source src="antizionism-film.mp4" type="video/mp4">
+      </video>
+      <button class="film-toggle" type="button">${text('Play film')}</button>
+    </section>
     ${hero(data,'antizionism')}
     <section class="era-intro"><div class="prose">${p(data.paragraphs[0])}${groupedParagraph(data.paragraphs.slice(1))}</div>${gallery(COPY.placements.intro)}</section>
     <section class="streams"><div class="section-inner"><h2>${text(COPY.streams.title)}</h2><div class="stream-prose">${COPY.streams.paragraphs.map(p).join('')}</div></div></section>
@@ -198,9 +204,9 @@ function installAudio() {
     audio.preload = 'metadata';
   }
   const sync = () => {
-    button.textContent = tx('Music');
     button.setAttribute('aria-pressed', String(!audio.paused));
     button.setAttribute('aria-label', tx(audio.paused ? 'Play music' : 'Pause music'));
+    button.setAttribute('title', tx(audio.paused ? 'Play music' : 'Pause music'));
   };
   button.addEventListener('click', async () => {
     try { if (audio.paused) await audio.play(); else audio.pause(); } catch (_) {}
@@ -229,9 +235,10 @@ function installWalkTransition() {
   }
 }
 
-function installHomeFilm() {
-  const film = document.querySelector('.home-film video');
-  const toggle = document.querySelector('.film-toggle');
+function installFilms() {
+  document.querySelectorAll('.home-film, .era-film').forEach(section => {
+  const film = section.querySelector('video');
+  const toggle = section.querySelector('.film-toggle');
   if (!film || !toggle) return;
   const sync = () => {
     const label = film.paused ? 'Play film' : 'Pause film';
@@ -245,10 +252,10 @@ function installHomeFilm() {
     sync();
   });
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const small = matchMedia('(max-width: 700px)').matches;
-  const savedData = navigator.connection?.saveData;
-  if (!reduced && !small && !savedData) film.play().catch(sync);
+  if (reduced) film.pause();
+  else film.play().catch(sync);
   sync();
+  });
 }
 
 function render() {
@@ -270,7 +277,7 @@ function render() {
     });
   });
   installAudio();
-  installHomeFilm();
+  installFilms();
   installWalkTransition();
 }
 
