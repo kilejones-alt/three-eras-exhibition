@@ -37,6 +37,7 @@ html,body{background:#000}
 
 
 
+
 /* v14: consistent editorial typography and a restrained walk into each era. */
 :root {
   --display: "Cormorant Garamond", Georgia, serif;
@@ -241,6 +242,7 @@ body, button, .cta, .email, .object-label, .chapter-marker,
   transition:transform .48s ease;
 }
 .walk-transition.is-visible .walk-threshold { transform:scale(1.06); }
+.is-departing { overflow:hidden; }
 .is-departing main { transition:opacity .48s ease,transform .48s ease; opacity:.25; transform:scale(1.015); }
 .is-arriving .era-hero-title,.is-arriving .era-art {
   opacity:0;
