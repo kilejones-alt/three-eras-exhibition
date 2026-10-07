@@ -604,3 +604,25 @@ body.is-arriving .era-hero-title,body.is-arriving .era-art { opacity:1;transform
 @media(prefers-reduced-motion:reduce) {
   body.is-departing main,body.is-arriving main,body.is-arriving.has-arrived main { opacity:1;transition:none; }
 }
+
+/* v20: editorial rhythm */
+.home-hero-copy { width:min(100%,890px); margin-inline:auto; }
+.opening-line,.hero-line {
+  font:400 clamp(1rem,1.2vw,1.14rem)/1.55 var(--body);
+  letter-spacing:.005em;
+  color:#b9c4c9;
+}
+.opening-line { max-width:72ch; margin-bottom:clamp(.7rem,1.5vw,1.15rem); }
+.hero-line { max-width:72ch; margin-top:clamp(.65rem,1.4vw,1rem); }
+.home-hero h1 { font-size:clamp(4.6rem,7.3vw,7.4rem); line-height:.96; }
+.home-body .prose p { margin-bottom:1.7rem; }
+.home-body .prose p:last-of-type { margin-bottom:0; }
+.era-intro .prose p { margin-bottom:1.65rem; }
+.era-intro .prose p:last-child { margin-bottom:0; }
+.era-art { margin-bottom:0; }
+@media(max-width:640px) {
+  .home-hero-copy { width:100%; }
+  .opening-line,.hero-line { font-size:1rem; line-height:1.5; }
+  .home-hero h1 { font-size:clamp(3.7rem,14vw,5.2rem); }
+  .home-body .prose p { margin-bottom:1.5rem; }
+}

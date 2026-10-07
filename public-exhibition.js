@@ -10,6 +10,7 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({
 }[c]));
 const text = value => esc(tx(value));
 const p = value => `<p>${text(value)}</p>`;
+const groupedParagraph = values => `<p>${values.map(text).join(' ')}</p>`;
 const chapters = [
   {key:'antijudaism', href:'antijudaism.html', title:'Antijudaism'},
   {key:'antisemitism', href:'antisemitism.html', title:'Antisemitism'},
@@ -86,7 +87,6 @@ function hero(data, key) {
     </div>
     <figure class="era-art">
       <div class="era-art-frame"><img src="${esc(data.image)}" alt="${esc(note.alt)}" fetchpriority="high"></div>
-      <figcaption>${objectInfo(data.image)}</figcaption>
     </figure>
   </section>`;
 }
@@ -115,7 +115,8 @@ function home() {
       </div>
     </section>
     <section class="home-body"><div class="prose">
-      ${h.body.map(p).join('')}
+      ${groupedParagraph(h.body.slice(0,2))}
+      ${groupedParagraph(h.body.slice(2))}
       <div class="home-actions"><a class="cta" href="mailto:${esc(h.email)}">${text(h.cta)}</a><a class="email" href="mailto:${esc(h.email)}">${esc(h.email)}</a></div>
     </div></section>
     <section class="era-selection" aria-label="${text('Explore the three eras')}">
@@ -136,7 +137,10 @@ function chapterNav(key) {
 
 function simpleEra(key) {
   const data = COPY.era[key];
-  return `${nav()}<main>${hero(data,key)}<section class="era-intro"><div class="prose">${data.paragraphs.map(p).join('')}</div></section>${chapterNav(key)}</main>`;
+  const paragraphs = key === 'antisemitism'
+    ? groupedParagraph(data.paragraphs.slice(0,2)) + groupedParagraph(data.paragraphs.slice(2))
+    : data.paragraphs.map(p).join('');
+  return `${nav()}<main>${hero(data,key)}<section class="era-intro"><div class="prose">${paragraphs}</div></section>${chapterNav(key)}</main>`;
 }
 
 function libelSection(item, key) {
@@ -174,7 +178,7 @@ function antizionism() {
   const data = COPY.era.antizionism;
   return `${nav()}<main>
     ${hero(data,'antizionism')}
-    <section class="era-intro"><div class="prose">${data.paragraphs.map(p).join('')}</div>${gallery(COPY.placements.intro)}</section>
+    <section class="era-intro"><div class="prose">${p(data.paragraphs[0])}${groupedParagraph(data.paragraphs.slice(1))}</div>${gallery(COPY.placements.intro)}</section>
     <section class="streams"><div class="section-inner"><h2>${text(COPY.streams.title)}</h2><p class="section-lead">${text(COPY.streams.lead)}</p><div class="stream-grid">${COPY.streams.items.map(x => `<p>${text(x)}</p>`).join('')}</div></div></section>
     <section class="genealogy"><div class="section-inner"><h2>${text(COPY.genealogy.title)}</h2><div class="genealogy-intro"><p>${COPY.genealogy.intro.map(text).join(' ')}</p></div><details class="timeline-disclosure"><summary>${text('Explore the historical timeline')} <span aria-hidden="true">+</span></summary><div class="timeline">${COPY.genealogy.events.map(e => `<article class="timeline-entry">${e.images?.length ? `<div class="timeline-art-grid">${e.images.map(img => `<figure class="timeline-art"><div class="timeline-art-frame"><img src="${esc(img)}" alt="${esc(objectDetails[img]?.[0] || 'Historical object')}" loading="lazy" decoding="async"></div><figcaption>${objectInfo(img)}</figcaption></figure>`).join('')}</div>` : ''}<h3>${text(e.title)}</h3><p>${e.paragraphs.map(text).join(' ')}</p></article>`).join('')}</div></details></div></section>
     <section class="libel-intro"><div class="section-inner"><p class="section-lead">${text(COPY.libels.intro)}</p></div></section>
