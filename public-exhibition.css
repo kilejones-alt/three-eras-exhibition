@@ -29,3 +29,6 @@ html,body{background:#000}
 
 /* v12: text-only era navigation at the bottom of the homepage. */
 .era-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:1rem}.era-pill{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.85rem 1.8rem;border:1px solid #827a6e;border-radius:999px;text-decoration:none;font:500 1.12rem/1.3 var(--sans);color:#f2eee7;background:#090909;transition:background .15s,border-color .15s}.era-pill:hover{background:#25221e;border-color:#e5dbca}.era-pill:focus-visible{outline:2px solid #f2eee7;outline-offset:5px}@media(max-width:480px){.era-pills{gap:.8rem}.era-pill{padding:.8rem 1.3rem}}
+
+/* v13: quiet header and editorial display-serif era pills */
+.site-header{grid-template-columns:auto 1fr;gap:1rem}.site-header .site-controls{grid-column:2;justify-self:end;border-top:0;padding-top:0}.era-pill{font-family:"Cormorant Garamond","Libre Caslon Display",Georgia,serif;font-weight:600;font-size:clamp(1.45rem,2.2vw,1.8rem);line-height:1.1;letter-spacing:.01em;min-height:58px;padding:.8rem 2rem}@media(max-width:640px){.site-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}.site-header .site-controls{grid-column:auto;margin-top:0;padding-top:0;justify-content:flex-end}}
