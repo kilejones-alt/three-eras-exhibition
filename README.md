@@ -2,7 +2,7 @@
 
 The public exhibition site for **The Third Era: Antizionism and the History of Jew-Hatred**.
 
-Open `index.html` for the homepage. Its three text-only pills lead to `antijudaism.html`, `antisemitism.html`, and `exhibition.html`. The Antizionism page ends with three text-only pills leading to `colonizer.html`, `apartheid.html`, and `genocide.html`. Each chapter continues forward through the exhibition.
+Open `index.html` for the homepage. Its three text-only pills lead to `antijudaism.html`, `antisemitism.html`, and `exhibition.html`. The Antizionism page ends with three text-only pills leading to `colonizer.html`, `apartheid.html`, and `genocide.html`. Visitors can continue forward through the exhibition.
 
 Artwork sits in separate lit frames, with a compact expandable object label beneath every image. Hovering lifts a frame and slowly enlarges the image over 5.4 seconds. Transitions and hover motion respect reduced-motion settings.
 
