@@ -23,3 +23,7 @@ Film controls use a compact grayscale play/pause symbol just beneath the film at
 Chapter and libel links now change pages within the exhibition without a full browser reload. The outgoing page moves gently closer, then the next page settles into view; reduced-motion visitors get an immediate change. Browser back and forward still follow the page URLs.
 
 The gallery's selected controls and small accents use satin silver (#B6B6B3). The reading text and dividers are neutral gray against a single black background; original artwork and films remain unchanged.
+
+The final title and caption colors on the libel pages are neutral silver and gray, matching the rest of the exhibition.
+
+Copy cleanup removes repeated closing text on Colonizer and the duplicated opening on Apartheid, and folds isolated Genocide labels into continuous prose.

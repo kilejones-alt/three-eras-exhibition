@@ -971,3 +971,7 @@ body[data-page="antizionism"] .era-film + .era-hero { padding-top:clamp(1.3rem,2
 @media(max-width:350px) {
   body[data-page="antisemitism"] .era-hero h1 { font-size:3.1rem; }
 }
+
+/* v27: finish the neutral title and caption treatment on the libel pages. */
+.libel-hero h1,.libel-selection h2 { color:#e9e9e7; }
+.era-art figcaption,.artifact figcaption,.timeline-art figcaption { color:#b6b6b3; }
