@@ -234,6 +234,7 @@ const titleByPage = {
   genocide:'Genocide',
 };
 let isChangingPage = false;
+let pendingPageChange = null;
 function resetScroll() {
   const root = document.documentElement;
   const previous = root.style.scrollBehavior;
@@ -251,7 +252,11 @@ function routeFromUrl(url) {
 }
 async function changePage(url, pushHistory) {
   const next = routeFromUrl(url);
-  if (!next || isChangingPage) return;
+  if (!next) return;
+  if (isChangingPage) {
+    pendingPageChange = {url, pushHistory};
+    return;
+  }
   if (next === page) {
     if (pushHistory && new URL(url, location.href).href !== location.href) history.pushState({page:next}, '', url);
     resetScroll();
@@ -282,6 +287,11 @@ async function changePage(url, pushHistory) {
     if (heading) { heading.tabIndex = -1; try { heading.focus({preventScroll:true}); } catch (_) { heading.focus(); } }
   } finally {
     isChangingPage = false;
+    if (pendingPageChange) {
+      const pending = pendingPageChange;
+      pendingPageChange = null;
+      queueMicrotask(() => changePage(pending.url, pending.pushHistory));
+    }
   }
 }
 function installWalkTransition() {

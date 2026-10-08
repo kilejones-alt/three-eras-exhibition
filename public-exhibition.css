@@ -912,3 +912,62 @@ body[data-page="antizionism"] .era-film + .era-hero { padding-top:clamp(1.3rem,2
   .film-toggle:hover,.film-toggle:focus-visible { transform:none; }
   .brand:hover img,.brand:focus-visible img { transform:none; }
 }
+
+/* v26: satin silver accents across the gallery. */
+:root {
+  --text:#e9e9e7;
+  --muted:#b6b6b3;
+  --line:rgba(182,182,179,.16);
+  --line2:rgba(182,182,179,.1);
+  --accent:#b6b6b3;
+}
+.opening-line,.hero-line,.home-body .prose p,.era-intro .prose p,
+.stream-prose p,.libel-copy p,.timeline-entry p,.section-lead,
+.genealogy-intro p,.libel-deck { color:#dededb; }
+.home-body .prose p:first-child,.era-intro .prose p:first-child { color:#dededb; }
+.site-header .era-nav a,.site-header .audio-toggle,
+.site-header .lang-controls button { color:#b6b6b3; }
+.site-header .lang-controls button.active,
+.site-header .audio-toggle[aria-pressed="true"] { color:#f2f2f0; }
+.site-header :is(.audio-toggle,.lang-controls button):focus-visible,
+.site-header .brand:focus-visible,
+.object-details summary:focus-visible,
+.timeline-disclosure summary:focus-visible { outline-color:#b6b6b3; }
+.era-pill {
+  border-color:#777774;
+  background:#090909;
+  color:#e9e9e7;
+}
+.era-pill:hover,.era-pill:focus-visible {
+  border-color:#b6b6b3;
+  background:#1a1a19;
+  color:#fff;
+  box-shadow:0 6px 24px rgba(182,182,179,.09);
+}
+.home-actions .cta { border-color:#b6b6b3;background:#b6b6b3;color:#080808; }
+.home-actions .cta:hover,.home-actions .cta:focus-visible {
+  border-color:#dededb;background:#dededb;color:#080808;
+}
+.home-actions .email,.chapter-link span { color:#b6b6b3; }
+.chapter-link strong { color:#e9e9e7; }
+.chapter-link:hover strong,.chapter-link:focus-visible strong { color:#fff; }
+.object-details,.object-details summary,.object-details dt { color:#b6b6b3; }
+.object-details dd { color:#e9e9e7; }
+.object-details p { color:#cdcdca; }
+.timeline-disclosure summary { color:#e9e9e7; }
+.film-toggle { border-color:#777774;background:#171717;color:#e9e9e7; }
+.film-toggle:hover,.film-toggle:focus-visible {
+  border-color:#b6b6b3;background:#b6b6b3;color:#080808;
+}
+@media(hover:hover) {
+  .site-header :is(.audio-toggle,.lang-controls button):hover,
+  .site-header :is(.audio-toggle,.lang-controls button):focus-visible {
+    color:#f2f2f0;text-shadow:0 0 12px rgba(182,182,179,.35);
+  }
+  .timeline-disclosure summary:hover,.timeline-disclosure summary:focus-visible {
+    color:#fff;text-shadow:0 0 17px rgba(182,182,179,.19);
+  }
+}
+@media(max-width:350px) {
+  body[data-page="antisemitism"] .era-hero h1 { font-size:3.1rem; }
+}
