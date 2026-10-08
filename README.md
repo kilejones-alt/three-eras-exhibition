@@ -27,3 +27,7 @@ The gallery's selected controls and small accents use satin silver (#B6B6B3). Th
 The final title and caption colors on the libel pages are neutral silver and gray, matching the rest of the exhibition.
 
 Copy cleanup removes repeated closing text on Colonizer and the duplicated opening on Apartheid, and folds isolated Genocide labels into continuous prose.
+
+Chapter titles are vertically centered against their opening artwork on desktop. The space from opening artwork to first paragraph is tighter on all screen sizes, and the homepage title sits closer to its first paragraph.
+
+Libel-page subtitles now lead directly into the opening paragraph without the previous oversized gap.

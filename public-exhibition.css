@@ -975,3 +975,37 @@ body[data-page="antizionism"] .era-film + .era-hero { padding-top:clamp(1.3rem,2
 /* v27: finish the neutral title and caption treatment on the libel pages. */
 .libel-hero h1,.libel-selection h2 { color:#e9e9e7; }
 .era-art figcaption,.artifact figcaption,.timeline-art figcaption { color:#b6b6b3; }
+
+/* v28: align chapter titles with the artwork and remove excess handoff space. */
+@media(min-width:801px) {
+  .era-hero,body[data-page="antizionism"] .era-hero {
+    padding-top:clamp(1.2rem,2vw,1.8rem);
+    padding-bottom:clamp(1.1rem,1.6vw,1.4rem);
+  }
+  .era-hero-title { align-self:center; }
+  body[data-page="antizionism"] .era-film + .era-hero {
+    padding-top:clamp(1.2rem,2vw,1.8rem);
+    padding-bottom:clamp(1.1rem,1.6vw,1.4rem);
+  }
+  .era-intro { padding-top:clamp(.9rem,1.5vw,1.2rem); }
+}
+@media(max-width:800px) {
+  .era-hero,body[data-page="antizionism"] .era-hero {
+    gap:1rem;
+    padding-top:1.2rem;
+    padding-bottom:.8rem;
+  }
+  body[data-page="antizionism"] .era-film + .era-hero {
+    padding-top:1.2rem;
+    padding-bottom:.8rem;
+  }
+  .era-intro { padding-top:.8rem; }
+}
+.home-film + .home-hero { padding-bottom:0; }
+.home-body { padding-top:clamp(.5rem,.8vw,.7rem); }
+.libel-hero { padding-bottom:0; }
+.libel-hero + .libel-reading { padding-top:1rem; }
+@media(max-width:640px) {
+  .libel-hero { padding-bottom:0; }
+  .libel-hero + .libel-reading { padding-top:.8rem; }
+}
