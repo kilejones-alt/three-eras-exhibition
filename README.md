@@ -19,3 +19,5 @@ The site is static HTML, CSS, JavaScript, and media files. No build step is requ
 The header uses a compact four-bar sound symbol, followed by English, Hebrew, and Russian controls in one row. The sound symbol has a spoken label and pressed state for assistive technology.
 
 Film controls use a compact grayscale play/pause symbol just beneath the film at its right edge. The grayscale logo moves diagonally and gains a subtle glow on hover. No new site color is applied.
+
+Chapter and libel links now change pages within the exhibition without a full browser reload. The outgoing page moves gently closer, then the next page settles into view; reduced-motion visitors get an immediate change. Browser back and forward still follow the page URLs.
