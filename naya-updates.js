@@ -4,6 +4,7 @@
   STOPAZ exhibition content update
   Source authority: "What Naya needs to do", verbatim contributions in author-account revisions dated 2026-08-26 through 2026-09-03.
   Homepage authority: STOPAZ source document revision 147, dated 2026-10-05.
+  Additional pending introductions confirmed by Kile as Naya's suggestions on 2026-10-11.
   Text window: 2026-08-11 through 2026-10-11. No generated editorial prose.
   This layer intentionally changes content only. It does not redesign existing pages,
   remove existing material, or activate the deferred "Antizionist crimes" section.
@@ -58,19 +59,20 @@
     {
       "title": "Antijudaism",
       "paragraphs": [
-        "When faith represented the highest moral good, the Jew was portrayed as the enemy of God.",
+        "For nearly two millennia, hatred of Jews was expressed primarily through the language of religion. In Christian Europe, where faith provided the dominant moral framework, the Jew was cast as the violator of what society held sacred: God, Christ, and Christian truth. Jews were accused of rejecting and killing Christ, desecrating the host, poisoning wells, conspiring against Christians, and murdering Christian children for their blood. These were not simply expressions of prejudice; they were libels that transformed the Jew into a cosmic villain—an enemy not merely of Christians, but of God Himself. Once the Jew was imagined as capable of the most monstrous crimes against the sacred, persecution could be understood not as cruelty, but as moral defense. Expulsions, forced conversions, segregation, massacres, and other forms of persecution could therefore be justified by those carrying them out as acts in service of a higher good. This established a pattern that would survive long after religious authority began to fade: first define the era’s highest virtue, then accuse the Jew of violating it. The language would change. The accusations would change. But the structure of the hatred would endure.",
         "This is what makes Jew-hatred so enduring and so difficult to recognize: it presents itself as a virtuous hatred. The Jew is not merely disliked but cast as a cosmic villain whose extermination becomes a moral act."
       ]
     },
     {
       "title": "Antisemitism",
       "paragraphs": [
-        "When race and nation became organizing ideals, the Jew was portrayed as their corrupting enemy."
+        "Like antijudaism, which cast the Jew as a violator of society’s religious virtues, the antisemitic era recast the Jew as a violator of the virtues of an increasingly secular society. As European society shifted from a religious to a secular worldview, the moral framework changed—and the image of the Jew changed with it."
       ]
     },
     {
       "title": "Antizionism",
       "paragraphs": [
+        "The postwar world supplied a new moral language. Empires were collapsing, national liberation movements were overturning colonial rule, and racism had become one of the defining evils of the age. Apartheid came to symbolize legalized racial domination; genocide, humanity’s ultimate crime. Human rights emerged as the era’s defining moral virtue. And once again, the Jew was recast as its enemy. Now reimagined as Zionist, the Jew was accused of embodying the very evils the postwar world had learned to condemn: racism, colonialism, apartheid, and genocide.",
         "Antizionism demonizes the Jew through the Jewish nation-state. Like antijudaism and antisemitism before it, antizionism portrays its Jewish target, Israel, as the embodiment of evil. Today, that evil is defined through the language of human rights. Israel is therefore accused of the era’s worst moral crimes: racism, colonialism, apartheid, genocide, and Nazism.",
         "Although antizionism emerged as a full-scale ideological campaign in the Soviet Union after 1967, its roots appeared much earlier. Antizionist ideas can already be found in Lenin’s writings in 1903 and later in the 1952 show trial of Rudolf Slánský, the Jewish General Secretary of the Communist Party of Czechoslovakia, who was accused of participating in a “Zionist conspiracy” against the state and subsequently executed. Slogans such as “Zionism is racism” and “Israel is committing a genocide” come from the Soviet Union. Few know the history of antizionism."
       ]
