@@ -2,13 +2,15 @@
 
 /*
   STOPAZ exhibition content update
-  Source authority: "What Naya needs to do", complete document text retrieved 2026-09-24.
+  Source authority: "What Naya needs to do", verbatim contributions in author-account revisions dated 2026-08-26 through 2026-09-03.
+  Homepage authority: STOPAZ source document revision 147, dated 2026-10-05.
+  Text window: 2026-08-11 through 2026-10-11. No generated editorial prose.
   This layer intentionally changes content only. It does not redesign existing pages,
   remove existing material, or activate the deferred "Antizionist crimes" section.
 */
 (() => {
   const esc = (s) => String(s).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  const p = (text, cls='') => `<p class="${cls}" data-en="${esc(text)}">${esc(text)}</p>`;
+  const p = (text, cls='') => `<p lang="en" dir="ltr" data-source-author="author-supplied" class="${cls}" data-en="${esc(text)}">${esc(text)}</p>`;
 
   function installStyles() {
     if (document.getElementById('naya-content-update-styles')) return;
@@ -48,7 +50,9 @@
 
   const sourceCopy = {
   "intro": [
-    "Central to understanding this continuity is a recurring pattern: before society can vilify the Jew, it must first establish what it considers virtuous. The Jew is then accused of violating that virtue."
+    "For two thousand years, hatred of Jews has changed its language, its accusations, and its justifications, but not its target. How does this ancient hatred persist while continually taking new forms?",
+    "This first-of-its-kind digital exhibition traces Jew-hatred across three distinct eras to reveal antizionism as the successor to antisemitism. In the first era, antijudaism, the Jew was condemned as the enemy of God. In the second, antisemitism, the Jew was cast as the enemy of race. And today, in the era of antizionism, Jews, through the Jewish state, are cast as violators of human rights—and therefore as enemies of humanity.",
+    "Central to understanding this continuity is a recurring pattern: before society can vilify the Jew, it must first establish what it considers virtuous. The Jew is then accused of violating that virtue. When faith represented the highest moral good, the Jew was portrayed as the enemy of God. When race and nation became organizing ideals, the Jew was portrayed as their corrupting enemy. Today, as human rights have become a dominant moral ideal, the Jewish state is accused of committing humanity’s gravest crimes."
   ],
   "eras": [
     {
@@ -67,22 +71,26 @@
     {
       "title": "Antizionism",
       "paragraphs": [
-        "Today, as human rights have become a dominant moral ideal, the Jewish state is accused of committing humanity’s gravest crimes."
+        "Antizionism demonizes the Jew through the Jewish nation-state. Like antijudaism and antisemitism before it, antizionism portrays its Jewish target, Israel, as the embodiment of evil. Today, that evil is defined through the language of human rights. Israel is therefore accused of the era’s worst moral crimes: racism, colonialism, apartheid, genocide, and Nazism.",
+        "Although antizionism emerged as a full-scale ideological campaign in the Soviet Union after 1967, its roots appeared much earlier. Antizionist ideas can already be found in Lenin’s writings in 1903 and later in the 1952 show trial of Rudolf Slánský, the Jewish General Secretary of the Communist Party of Czechoslovakia, who was accused of participating in a “Zionist conspiracy” against the state and subsequently executed. Slogans such as “Zionism is racism” and “Israel is committing a genocide” come from the Soviet Union. Few know the history of antizionism."
       ]
     }
   ],
   "framework": [
-    "Today, as human rights have become a dominant moral ideal, the Jewish state is accused of committing humanity’s gravest crimes."
+    "Antizionism demonizes the Jew through the Jewish nation-state. Like antijudaism and antisemitism before it, antizionism portrays its Jewish target, Israel, as the embodiment of evil. Today, that evil is defined through the language of human rights. Israel is therefore accused of the era’s worst moral crimes: racism, colonialism, apartheid, genocide, and Nazism.",
+    "Although antizionism emerged as a full-scale ideological campaign in the Soviet Union after 1967, its roots appeared much earlier. Antizionist ideas can already be found in Lenin’s writings in 1903 and later in the 1952 show trial of Rudolf Slánský, the Jewish General Secretary of the Communist Party of Czechoslovakia, who was accused of participating in a “Zionist conspiracy” against the state and subsequently executed. Slogans such as “Zionism is racism” and “Israel is committing a genocide” come from the Soviet Union. Few know the history of antizionism."
   ],
-  "libelIntro": [
-    "Three core libels, colonialism, apartheid (racism) , and Genocide (Nazism)  have acquired exceptional authority within contemporary antizionism. They place Zionism inside the most discredited categories of the modern era. Israel appears not as a nation whose history, borders, governments, wars, or laws can be argued over, but as colonial seizure, racial domination, and exterminatory violence made permanent in political form."
-  ],
+  "libelIntro": [],
   "libels": [
     {
       "title": "Colonialism",
       "id": "colonialism",
       "paragraphs": [
-        "The colonizer libel developed gradually, beginning with the denial of Jewish peoplehood. Before Jews could be portrayed as foreign colonizers in their ancestral homeland, they first had to be stripped of their identity as a nation. This process can be traced to early Soviet Marxism. In 1903, Lenin attacked the idea of Jewish nationhood as “reactionary,” and in 1913 Stalin explicitly argued that Jews did not constitute a nation. The next step was to recast Zionism as colonialism. In the 1920s, the Soviet Yevsektsiya and its newspaper Der Emes portrayed Zionism as an instrument of British imperialism and Western capitalism. The formula was taking shape: deny Jewish nationhood, then redefine the Jewish national movement as a colonial project."
+        "The colonizer libel developed gradually, beginning with the denial of Jewish peoplehood. Before Jews could be portrayed as foreign colonizers in their ancestral homeland, they first had to be stripped of their identity as a nation. This process can be traced to early Soviet Marxism. In 1903, Lenin attacked the idea of Jewish nationhood as “reactionary,” and in 1913 Stalin explicitly argued that Jews did not constitute a nation. The next step was to recast Zionism as colonialism. In the 1920s, the Soviet Yevsektsiya and its newspaper Der Emes portrayed Zionism as an instrument of British imperialism and Western capitalism. The formula was taking shape: deny Jewish nationhood, then redefine the Jewish national movement as a colonial project.",
+        "During the era of decolonization, this accusation became more explicit. Fayez Sayegh’s Zionist Colonialism in Palestine (1965) and Maxime Rodinson’s “Israel: A Colonial-Settler State?” (1967) helped establish the colonial framework. After 1967, the Soviet Union amplified it internationally. In Beware: Zionism! (1969), Soviet propagandist Yuri Ivanov portrayed Zionism as a “colonial ideology” and a form of “aggressive colonial expansion in the Middle East.” His book placed Zionism within a larger system of Western imperialism and presented Israel as an instrument of foreign capitalist power. This framing was subsequently repeated and disseminated internationally through the Soviet antizionist propaganda apparatus.",
+        "Jews as invaders of Arab lands and colonizers existed not only well before Sayegh but more critically, before the re-establishment of Israel. Jews as invaders and occupiers in the context of the Levant first appeared in 1940/1941 when the Grand Mufti of Jerusalem, Haj Amin al-Husseini, traveled to Germany to meet with Hitler and high-ranking Nazi officials. Inspired by Nazi anti-Jewish propaganda, al-Husseini played a pivotal role in helping to translate into Arabic Nazi propaganda. By 1941, Arab broadcast radio spread the “invader” and “colonizer” libels, accusing Jews of wanting to take over Arab Lands and “colonize Palestine.” By 1971, the Soviets ran a sophisticated campaign against Israel, deploying the Zionism is racism and imperialism libels.",
+        "The Nakba would become a central engine of the colonizer libel. The hundreds of thousands of Palestinian Arabs who fled during the 1948 war supplied the narrative with its defining image: the Palestinian refugee dispossessed by the Jewish settlers. Detached from the larger history of the war, competing national movements, Jewish displacement, and Jewish historical connection to the land, the Nakba could be organized into a simple moral structure: indigenous Palestinian → foreign Jewish settler → dispossession. In this formulation, the Nakba functions not merely as a Palestinian account of catastrophe and displacement but as the foundational evidence for interpreting Zionism itself as a project of settler conquest.",
+        "The power of the settler-colonialism libel lies in its ability to recast Jews as foreign interlopers, severing them from their historical connection to the land and erasing Jewish peoplehood from the story. It therefore accomplishes two things at once: it inverts history by denying Jewish nationhood while demonizing Jews through the dominant moral language of the postwar world—colonialism, racism, and oppression."
       ]
     },
     {
@@ -90,7 +98,10 @@
       "id": "apartheid",
       "paragraphs": [
         "The equation “Zionism = Racism” was crucial to the emerging apartheid charge. Apartheid South Africa had become the postwar world’s most recognizable symbol of institutionalized racism. By defining Zionism itself as a racist ideology, Soviet propaganda could place Israel within the same moral and political category as South Africa: colonialism became racial domination; racial domination became apartheid.",
-        "The apartheid libel has a particularly traceable genealogy. It overlaps with the colonialism narrative we just mapped, but its history is distinct: the key move was to transform Zionism from a purported form of colonialism into a purported system of racial domination analogous to South Africa. One of the earliest explicit comparisons came not from Palestinian Arabs or the Soviet Union, but from Hendrik Verwoerd, the South African prime minister and principal architect of apartheid."
+        "The apartheid libel has a particularly traceable genealogy. It overlaps with the colonialism narrative we just mapped, but its history is distinct: the key move was to transform Zionism from a purported form of colonialism into a purported system of racial domination analogous to South Africa. One of the earliest explicit comparisons came not from Palestinian Arabs or the Soviet Union, but from Hendrik Verwoerd, the South African prime minister and principal architect of apartheid.",
+        "Israel was then publicly opposing South African apartheid at the United Nations. In 1961 Verwoerd attacked Israel for doing so and compared Israel's creation to South Africa's own situation. The episode is important because during the early 1960s Israel was actually cultivating relationships with newly independent African states and taking an increasingly vocal anti-apartheid position. The apartheid libel gained particular traction with Fayez Sayegh’s Zionist Colonialism in Palestine, an instrumental in introducing the apartheid analogy into Palestinian advocacy and international institutions. Historian Nina Fischer's research concludes that Sayegh was “almost singlehandedly responsible for introducing the apartheid analogy at the United Nations.” In his 1965 Zionist Colonialism in Palestine, Sayegh already characterized Zionism in racial terms. His argument centered on what he called racial self-segregation, exclusiveness and supremacy. Importantly, this was before Israel occupied the West Bank and Gaza in 1967.",
+        "The Soviet Union played an important role in systematizing and internationalizing the comparison of Zionism with apartheid, particularly in the 1970s. After 1967, Soviet propaganda increasingly argued that Zionism was not simply nationalism but an ideology of racial superiority. This made the South African analogy especially useful. Apartheid had become an internationally recognizable symbol of institutionalized racism; if Zionism could be defined as racism, Israel could then be placed in the same moral category as apartheid South Africa. As such, the apartheid libel relied heavily on the “Zionism is racism” charge.",
+        "By the mid-1970s this comparison was explicit. One particularly important Soviet-bloc publication was Valery Skurlatov's Zionism and Apartheid (Сионизм и апартеид). Soviet propaganda literature used supposed parallels between Jewish “chosenness” and white supremacy to claim that Israel and South Africa were governed by analogous doctrines of racial separation. In August 1977, Soviet writer N. Oleynikov wrote through the official TASS news agency: “Tel Aviv and Pretoria are akin.”"
       ]
     },
     {
@@ -101,15 +112,17 @@
         "General Ion Pacepa, chief of Romania’s foreign intelligence service, played a significant role in Soviet bloc operations directed against Israel and the US. In 1978, he became the highest-ranking intelligence officer ever to defect from the Soviet sphere and, among many secret revelations, provided details of KGB operations against Israel. Pacepa says the chairman of the KGB, Yuri Andropov (later Leonid Brezhnev’s successor as General Secretary of the Soviet Communist Party), told him:",
         "“We needed to instill a Nazi-style hatred for the Jews throughout the Islamic world, and to turn this weapon of the emotions into a terrorist bloodbath against Israel and its main supporter, the United States.”",
         "To achieve its objectives, the Kremlin devised Operation SIG, a disinformation campaign intended “to turn the whole Islamic world against Israel and the US.” Pacepa reported that by 1978, under Operation SIG, the KGB had sent some 4,000 Soviet bloc “agents of influence” into Islamic countries to help achieve this. They also printed and circulated vast amounts of anti-Israel and anti-Jewish propaganda, including the fabricated, antisemitic text The Protocols of the Elders of Zion, translated into Arabic.",
+        "During the 1970s, Soviet rhetoric increasingly combined several accusations that we've already been tracing separately:",
+        "Israel = colonialism",
+        "Zionism = racism",
+        "Israel = Nazi-like aggressor",
         "These accusations reinforced one another. Palestinian Arabs could now be represented simultaneously as an indigenous population facing colonial dispossession, an Arab population subjected to racism, and a people facing Nazi-like violence. During the 1982 Lebanon War, the Soviet state moved from analogy to an explicit accusation of genocide. On June 6, the official Soviet news agency TASS accused Israel of pursuing: “genocide against the Arab people of Palestine” and described the objective as their: “physical extermination.” By 1984, the language becomes even more striking. The Soviet foreign-propaganda agency Novosti published an English-language pamphlet entitled Zionists Count on Terror. Izabella Tabarovsky has documented language in it including: “Genocide Israeli style,” “Zionist-engineered genocide” and even “the ‘final solution’ of the Palestinian question.”"
       ]
     }
   ],
-  "archive": [
-    "Posters, photographs, pamphlets, newspapers, caricatures, broadcasts, and state publications show how antizionism was produced, circulated, and transmitted."
-  ]
+  "archive": []
 };
-  const homeIntro = ["In May 2026, Stop Antizionism made history with the first World Symposium Against Antizionism. In 2027, we are making history again.","The Third Era tells a story no museum has told. This first-of-its-kind exhibition brings the largely overlooked history of antizionism into public view. Through powerful archival documents, historical images, primary sources, multimedia, and survivor testimony, visitors will experience the evolution of Jew-hatred and discover how old libels were transformed, adapted, and given new language for a new era."];
+  const homeIntro = ["In May 2026, Stop Antizionism made history with the first World Symposium Against Antizionism. In 2027, we are making history again.", "The Third Era tells a story no museum has told. This first-of-its-kind exhibition brings the largely overlooked history of antizionism into public view. Through powerful archival documents, historical images, primary sources, multimedia, and survivor testimony, visitors will experience the evolution of Jew-hatred and discover how old libels were transformed, adapted, and given new language for a new era.", "Premiering in 2027, The Third Era is more than an exhibition. It is the beginning of a lasting educational initiative designed to travel to museums and universities, reach new generations, and bring a missing chapter of modern Jewish history into the public consciousness."];
   const paragraphs = values => values.map(text => p(text)).join('\n');
   const erasMarkup = () => '<div class="three-eras-intro" lang="en" dir="ltr">' + paragraphs(homeIntro) + '</div>' + sourceCopy.eras.map(era => '<div class="era-source-section" lang="en" dir="ltr"><h3>' + esc(era.title) + '</h3>' + paragraphs(era.paragraphs) + '</div>').join('');
 
@@ -205,7 +218,7 @@
     archive.id = 'exhibition-archive';
     archive.lang = 'en';
     archive.dir = 'ltr';
-    archive.innerHTML = '<h2>The Archive</h2>' + p(sourceCopy.archive[0],'naya-lede') + '<div class="naya-archive-grid">' + archiveObjects.map((o,i)=>'<article class="naya-archive-card"><img loading="lazy" decoding="async" src="'+esc(o.img)+'" alt="'+esc(o.title)+'"><div class="naya-object-meta"><span>Object '+String(i+1).padStart(2,'0')+'</span><span>'+esc(o.meta)+'</span></div><h3>'+esc(o.title)+'</h3>'+paragraphs(o.paragraphs)+'</article>').join('')+'</div>';
+    archive.innerHTML = '<h2>The Archive</h2>' + paragraphs(sourceCopy.archive) + '<div class="naya-archive-grid">' + archiveObjects.map((o,i)=>'<article class="naya-archive-card"><img loading="lazy" decoding="async" src="'+esc(o.img)+'" alt="'+esc(o.title)+'"><div class="naya-object-meta"><span>Object '+String(i+1).padStart(2,'0')+'</span><span>'+esc(o.meta)+'</span></div><h3>'+esc(o.title)+'</h3>'+paragraphs(o.paragraphs)+'</article>').join('')+'</div>';
     libels.after(archive);
   }
 
@@ -218,3 +231,4 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run, {once:true});
   else run();
 })();
+
