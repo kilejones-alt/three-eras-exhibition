@@ -425,7 +425,7 @@ function prepare() {
     if (!dictionary.has(key)) dictionary.set(key,[node.dataset.en,node.dataset.he,node.dataset.ru]);
   });
   document.querySelectorAll('[data-en],main p,main h1,main h2,main h3,main h4,main summary,main a,main button,.naya-kicker,.naya-object-meta span,.museum-catalogue-key,.museum-catalogue-value,.museum-catalogue-status,.museum-object-link,.museum-wayfinder-heading').forEach(node=>{
-    if (node.matches('[data-he][data-ru]')) return;
+    if (node.querySelector('img,picture,svg,video') || node.matches('[data-he][data-ru]')) return;
     if (node.hasAttribute('data-source-author')) return;
     if (node.hasAttribute('data-source-author')) return;
     const en = node.dataset.en || node.textContent;
@@ -445,7 +445,7 @@ function apply() {
   const lang = ['he','ru'].includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   document.documentElement.dir = lang==='he' ? 'rtl' : 'ltr';
   document.querySelectorAll('[data-en][data-he][data-ru]').forEach(node=>{
-    if (node.id === 'audio-btn') return;
+    if (node.id === 'audio-btn' || node.querySelector('img,picture,svg,video')) return;
     const value=node.dataset[lang];
     node.textContent=value;
     if (node.dataset.fullText) node.dataset.fullText=value;

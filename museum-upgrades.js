@@ -247,14 +247,14 @@
 
   function init() {
     document.documentElement.classList.add('museum-production-pass');
-    installPermanentObjectIds();
+
     classifyObjectRhythm();
     makeMotionOneWay();
     revealUsefulProvenance();
     assignArchiveIds();
     unifyExhibitionLayout();
     labelThirdEraAsAbout();
-    installWayfinder();
+
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => setTimeout(init,0), {once:true});

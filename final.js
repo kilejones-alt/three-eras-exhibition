@@ -157,7 +157,7 @@
   naya.dataset.exhibitProductionLayer = 'naya-content';
   naya.onload = function(){
     const museum = document.createElement('script');
-    museum.src = 'museum-upgrades.js?v=20261011-no-image-descriptions';
+    museum.src = 'museum-upgrades.js?v=20261011-doors-20261011-no-image-descriptions';
     museum.defer = true;
     museum.dataset.exhibitProductionLayer = 'museum-ux';
     const locales = document.createElement('script');
