@@ -38,7 +38,6 @@
       .naya-archive-card img{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#111114;margin:0 0 1.15rem}
       .naya-archive-card p{font-size:.96rem;line-height:1.55;margin:.55rem 0;max-width:none}
       .naya-archive-card .naya-verification{color:#a9a9b1;font-size:.83rem}
-      .naya-marr-note{border-left:1px solid rgba(116,38,45,.8);padding-left:clamp(1rem,2vw,1.5rem);margin:1.25rem 0 0}
       .era-libel-card .naya-expanded-copy{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.07)}
       .era-libel-card .naya-expanded-copy p{margin:.72rem 0}
       .home-source-context .three-eras-intro .naya-home-lede{font-size:clamp(1.05rem,1.45vw,1.24rem);line-height:1.56}
@@ -146,8 +145,9 @@
     "Archive\u000bThe holding institution, collection or fonds, catalogue or accession number, permanent source, and rights or credit information wherever available."
   ]
 };
+  const homeIntro = ["In May 2026, Stop Antizionism made history with the first World Symposium Against Antizionism. In 2027, we are making history again.","The Third Era tells a story no museum has told. This first-of-its-kind exhibition brings the largely overlooked history of antizionism into public view. Through powerful archival documents, historical images, primary sources, multimedia, and survivor testimony, visitors will experience the evolution of Jew-hatred and discover how old libels were transformed, adapted, and given new language for a new era."];
   const paragraphs = values => values.map(text => p(text)).join('\n');
-  const erasMarkup = () => '<div class="three-eras-intro" lang="en" dir="ltr">' + paragraphs(sourceCopy.intro) + '</div>' + sourceCopy.eras.map(era => '<div class="era-source-section" lang="en" dir="ltr"><h3>' + esc(era.title) + '</h3>' + paragraphs(era.paragraphs) + '</div>').join('');
+  const erasMarkup = () => '<div class="three-eras-intro" lang="en" dir="ltr">' + paragraphs(homeIntro) + '</div>' + sourceCopy.eras.map(era => '<div class="era-source-section" lang="en" dir="ltr"><h3>' + esc(era.title) + '</h3>' + paragraphs(era.paragraphs) + '</div>').join('');
 
   function updateHome() {
     const context = document.querySelector('.home-source-context');
@@ -156,24 +156,6 @@
     const framework = document.querySelector('.home-framework');
     context.innerHTML = '<h2>The Three Eras of Jew-Hatred</h2>' + erasMarkup();
     if (framework) context.querySelector('.era-source-section').before(framework);
-  }
-
-  function updateAntisemitismPage() {
-    if (!/antisemitism\.html$/i.test(location.pathname)) return;
-    const main = document.querySelector('main');
-    if (!main || document.getElementById('naya-marr-focus')) return;
-    const firstExhibit = main.querySelector('.exhibition-section');
-    const section = document.createElement('section');
-    section.id = 'naya-marr-focus';
-    section.className = 'naya-source-update genealogy-script';
-    section.innerHTML = `
-      <div class="naya-kicker" data-en="THE RACIAL TURN">THE RACIAL TURN</div>
-      <h2 data-en="Wilhelm Marr and the New Vocabulary of Antisemitism">Wilhelm Marr and the New Vocabulary of Antisemitism</h2>
-      ${p('The nineteenth century did not merely inherit older anti-Jewish accusations; it recoded them. Wilhelm Marr belongs at the center of that transition. In 1879 he helped popularize the term “antisemitism” as a political label, shifting the imagined Jewish danger from theology toward race, nation, heredity, and an allegedly permanent conflict between peoples.','naya-lede')}
-      ${p('That linguistic change made conversion an inadequate answer to the antisemite’s charge. If Jewishness was treated as an inherited racial or national condition, baptism could no longer remove the supposed danger. The Jew could be portrayed as a biological, political, economic, and national antagonist at once.')}
-      ${p('Marr therefore marks a useful threshold between the first and second eras of Jew-hatred: the target remained the Jew, but the governing moral and explanatory vocabulary became secular, racial, and nationalist.')}
-    `;
-    if (firstExhibit) firstExhibit.before(section); else main.appendChild(section);
   }
 
   const archiveObjects = [
@@ -290,7 +272,6 @@
   function run() {
     installStyles();
     updateHome();
-    updateAntisemitismPage();
     updateExhibition();
   }
 

@@ -312,21 +312,6 @@ const rows = [
     "Учреждение-хранитель, коллекция или фонд, каталожный или инвентарный номер, постоянный источник, а также сведения о правах и атрибуции, если они доступны."
   ],
   [
-    "The nineteenth century did not merely inherit older anti-Jewish accusations; it recoded them. Wilhelm Marr belongs at the center of that transition. In 1879 he helped popularize the term “antisemitism” as a political label, shifting the imagined Jewish danger from theology toward race, nation, heredity, and an allegedly permanent conflict between peoples.",
-    "המאה התשע־עשרה לא רק ירשה האשמות ישנות נגד יהודים; היא קודדה אותן מחדש. וילהלם מאר נמצא במרכז המעבר הזה. ב־1879 סייע להפיץ את המונח ״אנטישמיות״ כתווית פוליטית, והסיט את הסכנה היהודית המדומיינת מן התיאולוגיה אל הגזע, הלאום, התורשה ועימות קבוע לכאורה בין עמים.",
-    "XIX век не просто унаследовал прежние антиеврейские обвинения — он перекодировал их. Вильгельм Марр занимает центральное место в этом переходе. В 1879 году он помог популяризировать термин «антисемитизм» как политическое обозначение, перенеся воображаемую еврейскую угрозу из богословия в область расы, нации, наследственности и якобы неизменного конфликта между народами."
-  ],
-  [
-    "That linguistic change made conversion an inadequate answer to the antisemite’s charge. If Jewishness was treated as an inherited racial or national condition, baptism could no longer remove the supposed danger. The Jew could be portrayed as a biological, political, economic, and national antagonist at once.",
-    "השינוי הלשוני הזה הפך את המרת הדת לתשובה בלתי מספקת להאשמת האנטישמי. אם היהודיות נתפסה כמצב גזעי או לאומי מורש, הטבילה כבר לא יכלה להסיר את הסכנה כביכול. אפשר היה להציג את היהודי כאויב ביולוגי, פוליטי, כלכלי ולאומי בעת ובעונה אחת.",
-    "Эта языковая перемена сделала обращение в другую веру недостаточным ответом на обвинение антисемита. Если еврейство рассматривалось как наследуемое расовое или национальное состояние, крещение уже не могло устранить предполагаемую опасность. Еврея можно было изображать одновременно биологическим, политическим, экономическим и национальным противником."
-  ],
-  [
-    "Marr therefore marks a useful threshold between the first and second eras of Jew-hatred: the target remained the Jew, but the governing moral and explanatory vocabulary became secular, racial, and nationalist.",
-    "מאר מסמן אפוא נקודת מעבר שימושית בין התקופה הראשונה לשנייה של שנאת היהודים: המטרה נותרה היהודי, אך אוצר המילים המוסרי וההסברי השולט נעשה חילוני, גזעי ולאומני.",
-    "Таким образом, Марр обозначает важный порог между первой и второй эпохами ненависти к евреям: мишенью оставался еврей, но определяющий нравственный и объяснительный словарь стал светским, расовым и националистическим."
-  ],
-  [
     "“But He Does Not Listen to the UN…”",
     "״אבל הוא אינו מקשיב לאו״ם…״",
     "«А он — не слушает ООН…»"
@@ -722,11 +707,6 @@ const rows = [
     "РАСОВЫЙ ПОВОРОТ"
   ],
   [
-    "Wilhelm Marr and the New Vocabulary of Antisemitism",
-    "וילהלם מאר ואוצר המילים החדש של האנטישמיות",
-    "Вильгельм Марр и новый язык антисемитизма"
-  ],
-  [
     "Creator, context & archive",
     "יוצר, הקשר וארכיון",
     "Автор, контекст и архив"
@@ -859,6 +839,7 @@ rows.push(
   ['Antisemitism gallery introduction','תמונת המבוא לחדר האנטישמיות','Вступительное изображение зала антисемитизма'],
   ['Bund Archival Image','תצלום ארכיוני של הבונד','Архивная фотография Бунда']
 );
+rows.push(...[["In May 2026, Stop Antizionism made history with the first World Symposium Against Antizionism. In 2027, we are making history again.","במאי 2026 עשתה Stop Antizionism היסטוריה עם הסימפוזיון העולמי הראשון נגד אנטי־ציונות. בשנת 2027 אנחנו עושים היסטוריה שוב.","В мае 2026 года Stop Antizionism вошла в историю, проведя первый Всемирный симпозиум против антисионизма. В 2027 году мы снова творим историю."],["The Third Era tells a story no museum has told. This first-of-its-kind exhibition brings the largely overlooked history of antizionism into public view. Through powerful archival documents, historical images, primary sources, multimedia, and survivor testimony, visitors will experience the evolution of Jew-hatred and discover how old libels were transformed, adapted, and given new language for a new era.","העידן השלישי מספר סיפור שאף מוזיאון לא סיפר. תערוכה ראשונה מסוגה זו מביאה לעין הציבור את ההיסטוריה של האנטי־ציונות, שזכתה במידה רבה להתעלמות. באמצעות מסמכים ארכיוניים רבי־עוצמה, דימויים היסטוריים, מקורות ראשוניים, מולטימדיה ועדויות ניצולים, המבקרים יחוו את התפתחות שנאת היהודים ויגלו כיצד עלילות ישנות עברו שינוי, התאמה וקיבלו שפה חדשה לעידן חדש.","«Третья эра» рассказывает историю, которую не рассказывал ни один музей. Эта первая в своем роде выставка выводит в публичное пространство во многом упускаемую из виду историю антисионизма. Через архивные документы, исторические изображения, первоисточники, мультимедиа и свидетельства выживших посетители увидят эволюцию ненависти к евреям и узнают, как старые наветы были преобразованы, адаптированы и получили новый язык для новой эпохи."]]);
 const dictionary = new Map(rows.map(row=>[normalize(row[0]),row]));
 function prepare() {
   // Existing translations remain the source for objects that were already bilingual.

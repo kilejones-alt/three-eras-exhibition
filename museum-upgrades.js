@@ -150,7 +150,7 @@
     },
     'Zionism = Racism': {
       creator:'Zh. (Joseph) Efimovsky; published by the Leningrad propaganda collective Combat Pencil (Боевой карандаш).',
-      setting:'1976, one year after UN General Assembly Resolution 3379. The poster translates the “Zionism is racism” formula into an image of racial domination.',
+      setting:"Image: This is Zh. (Joseph) Efimovsky, Zionism = Racism (Сионизм — это расизм!), 1976, published by the Leningrad propaganda collective Боевой карандаш (Boевой Karandash / “Combat Pencil”). Published one year after the 1975 UN resolution declaring that “Zionism is a form of racism and racial discrimination,” Efimovsky’s poster translates that political formula into a stark visual image. An Arab man is shown restrained by a Star of David-shaped collar, transforming the Jewish symbol into an instrument of racial oppression.",
       archive:'Combat Pencil, Leningrad, 1976. Holding institution, permanent catalogue/accession record, and rights credit remain to be attached to the displayed copy.'
     }
   };
@@ -202,6 +202,11 @@
       copy.className = 'uniform-archive-copy';
       const duplicateObjectRow = record.querySelector('.museum-catalogue-row');
       const caption = card.querySelector('p:not(.naya-verification)');
+      // Keep a supplied caption once when it also replaces a supplementary setting note.
+      [...record.querySelectorAll('.museum-catalogue-row')].forEach(row => {
+        if (row.querySelector('.museum-catalogue-key')?.textContent === 'Historical setting' &&
+            row.querySelector('.museum-catalogue-value')?.textContent === caption?.textContent) row.remove();
+      });
       if (duplicateObjectRow?.querySelector('.museum-catalogue-value')?.textContent === caption?.textContent) {
         duplicateObjectRow.remove();
       }
